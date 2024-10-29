@@ -1,9 +1,13 @@
 # Remote Ubuntu Server Menggunakan SSH dari Ubuntu Desktop dan Mengubah Port SSH
 Laporan ini menjelaskan langkah-langkah untuk melakukan remote server Ubuntu menggunakan SSH dari Ubuntu Desktop serta mengubah port default SSH dari 22 menjadi 40.
-## Menginstal dan set up ubuntu server
+## Menginstal dan Set Up Ubuntu Server
 - download iso ubuntu server di ubuntu.com
 - masuk ke virtual box dan klik new di kanan atas untuk membuat virtual machine baru
-https://github.com/M-Prakarsa-Al-Islam/SSH-Remote-Ubuntu-Server/blob/main/Screenshot%20(243).png?raw=true
+- lalu di set up nama virtual machinenya, masukkan iso ubuntu servernya, berap banyak penyimpanan,ram dan cpu yang akan digunakan. lalu klik finish jika sudah
+- pada virtual machine yang isinya ubuntu server tadi, klik kanan dan pergi ke setting, lalu ke network dan ganti attached to NAT menjadi attached to Bridge Adapter, lalu klik ok
+![image alt](https://github.com/M-Prakarsa-Al-Islam/SSH-Remote-Ubuntu-Server/blob/2908d5315631dbc35f058e4c4445596a335757e3/Screenshot%20(243).png)
+- klik start di ujung kanan
+- 
 ## Langkah-langkah 
 ### 1. Mengaktifkan SSH pada Server Ubuntu
 Untuk meninstalnya dapat menggunakan command:
