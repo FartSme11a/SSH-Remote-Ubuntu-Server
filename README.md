@@ -7,10 +7,39 @@ Laporan ini menjelaskan langkah-langkah untuk melakukan remote server Ubuntu men
 - pada virtual machine yang isinya ubuntu server tadi, klik kanan dan pergi ke setting, lalu ke network dan ganti attached to NAT menjadi attached to Bridge Adapter, lalu klik ok
 ![image alt](https://github.com/M-Prakarsa-Al-Islam/SSH-Remote-Ubuntu-Server/blob/2908d5315631dbc35f058e4c4445596a335757e3/Screenshot%20(243).png)
 - klik start di ujung kanan
-- 
+- klik enter di try or install
+![image alt](https://github.com/M-Prakarsa-Al-Islam/SSH-Remote-Ubuntu-Server/blob/47772d1e15aa34d9b345c8d33f4b03f4ee57317f/Screenshot%20(244).png)
+- tunggu sampai proses selesai
+- pilih bahasanya lalu enter
+![image alt](https://github.com/M-Prakarsa-Al-Islam/SSH-Remote-Ubuntu-Server/blob/47772d1e15aa34d9b345c8d33f4b03f4ee57317f/Screenshot%20(247).png)
+- untuk chose configuration, saya langsung klik enter di done
+![image alt](https://github.com/M-Prakarsa-Al-Islam/SSH-Remote-Ubuntu-Server/blob/47772d1e15aa34d9b345c8d33f4b03f4ee57317f/Screenshot%20(249).png)
+- untuk choose type of installation, saya klik enter di done
+![image alt](https://github.com/M-Prakarsa-Al-Islam/SSH-Remote-Ubuntu-Server/blob/47772d1e15aa34d9b345c8d33f4b03f4ee57317f/Screenshot%20(251).png)
+- untuk network connection, saya klik enter di done
+![image alt](https://github.com/M-Prakarsa-Al-Islam/SSH-Remote-Ubuntu-Server/blob/47772d1e15aa34d9b345c8d33f4b03f4ee57317f/Screenshot%20(252).png)
+- untuk proxy connection, saya klik enter di done
+![image alt](https://github.com/M-Prakarsa-Al-Islam/SSH-Remote-Ubuntu-Server/blob/47772d1e15aa34d9b345c8d33f4b03f4ee57317f/Screenshot%20(253).png)
+- untuk ubuntu archive mirror, saya klik enter di done
+![image alt](https://github.com/M-Prakarsa-Al-Islam/SSH-Remote-Ubuntu-Server/blob/47772d1e15aa34d9b345c8d33f4b03f4ee57317f/Screenshot%20(254).png)
+- untuk guided storage configuration, saya klik enter di done
+![image alt](https://github.com/M-Prakarsa-Al-Islam/SSH-Remote-Ubuntu-Server/blob/47772d1e15aa34d9b345c8d33f4b03f4ee57317f/Screenshot%20(255).png)
+- untuk di storage configuratuion, saya klik enter di done, lalu enter di continue
+![image alt](https://github.com/M-Prakarsa-Al-Islam/SSH-Remote-Ubuntu-Server/blob/47772d1e15aa34d9b345c8d33f4b03f4ee57317f/Screenshot%20(257).png)
+- masukkan name, server name,username dan pasword lalu klik enter di done
+![image alt](https://github.com/M-Prakarsa-Al-Islam/SSH-Remote-Ubuntu-Server/blob/47772d1e15aa34d9b345c8d33f4b03f4ee57317f/Screenshot%20(258).png)
+- untuk upgrade ubuntu pro, saya klik enter di continue
+![image alt](https://github.com/M-Prakarsa-Al-Islam/SSH-Remote-Ubuntu-Server/blob/47772d1e15aa34d9b345c8d33f4b03f4ee57317f/Screenshot%20(259).png)
+- untuk ssh setup, pada kotak instal openssh saya klik spasi untuk mencetangkan kotak tersebut, lalu kebawah untuk menekan enter di done
+![image alt](https://github.com/M-Prakarsa-Al-Islam/SSH-Remote-Ubuntu-Server/blob/47772d1e15aa34d9b345c8d33f4b03f4ee57317f/Screenshot%20(260).png)
+- untuk featured snaps, saya klik enter di done
+![image alt](https://github.com/M-Prakarsa-Al-Islam/SSH-Remote-Ubuntu-Server/blob/47772d1e15aa34d9b345c8d33f4b03f4ee57317f/Screenshot%20(262).png)
+- untuk isntalling sistem tunggu sampai complete lalu pilih reboot now
+![image alt](https://github.com/M-Prakarsa-Al-Islam/SSH-Remote-Ubuntu-Server/blob/47772d1e15aa34d9b345c8d33f4b03f4ee57317f/Screenshot%20(265).png)
+- kalau sudah masuk di terminal masukkan nama dan pasword. maka server ubuntu sudah siap
 ## Langkah-langkah 
 ### 1. Mengaktifkan SSH pada Server Ubuntu
-Untuk meninstalnya dapat menggunakan command:
+Untuk menginstalnya ssh di server gunakan command:
 - $ sudo apt install openssh-server
 ### 2. Mengubah Port SSH menjadi 40
 - Buka file konfigurasi SSH di server menggunakan command: sudo nano /etc/ssh/sshd_config.
@@ -18,6 +47,9 @@ Untuk meninstalnya dapat menggunakan command:
 - Pada editor Nano, tekan Ctrl+O lalu Enter untuk menyimpan, dan Ctrl+X untuk keluar.
 - Restart layanan SSH untuk menerapkan perubahan dengan cara keluar dari ubuntu server tadi lalu masuk kembali
 - Setelah selesai, cek status layanan SSH untuk memastikan bahwa portnya telah berubah menjadi 40, menggunakn command: $ sudo systemctl status ssh
+### 3. Melihat ip address server
+menggunakan command:
+- $ ip addr
 ### 3. Mengakses Ubuntu Server dari Ubuntu Desktop dengan SSH
 - Buka terminal di Ubuntu Desktop.
 - install ssh nya menggunakan command: $ sudo apt install openssh-client
