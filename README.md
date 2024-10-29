@@ -45,16 +45,20 @@ Untuk menginstalnya ssh di server gunakan command:
 - Buka file konfigurasi SSH di server menggunakan command: sudo nano /etc/ssh/sshd_config.
 - Cari baris yang berisi #Port 22, lalu ubah menjadi Port 40 (tanda # dihapus juga).
 - Pada editor Nano, tekan Ctrl+O lalu Enter untuk menyimpan, dan Ctrl+X untuk keluar.
-- Restart layanan SSH untuk menerapkan perubahan dengan cara keluar dari ubuntu server tadi lalu masuk kembali
-- Setelah selesai, cek status layanan SSH untuk memastikan bahwa portnya telah berubah menjadi 40, menggunakn command: $ sudo systemctl status ssh
+![image alt](https://github.com/M-Prakarsa-Al-Islam/SSH-Remote-Ubuntu-Server/blob/673a8b27cffa9ea7a03e66ffbc3b0b582637f320/Screenshot%20(267).png)
+- Restart layanan SSH untuk menerapkan perubahan dengan commad: $ sudo systemctl restart ssh ,atau keluar dari ubuntu server tadi lalu masuk kembali
+- Cek status layanan SSH untuk memastikan bahwa portnya telah berubah menjadi 40, menggunakn command: $ sudo systemctl status ssh
+![image alt](https://github.com/M-Prakarsa-Al-Islam/SSH-Remote-Ubuntu-Server/blob/673a8b27cffa9ea7a03e66ffbc3b0b582637f320/Screenshot%20(270).png)
 ### 3. Melihat ip address server
 menggunakan command:
 - $ ip addr
+![image alt](https://github.com/M-Prakarsa-Al-Islam/SSH-Remote-Ubuntu-Server/blob/673a8b27cffa9ea7a03e66ffbc3b0b582637f320/Screenshot%20(272).png)
 ### 3. Mengakses Ubuntu Server dari Ubuntu Desktop dengan SSH
 - Buka terminal di Ubuntu Desktop.
 - install ssh nya menggunakan command: $ sudo apt install openssh-client
 - Jalankan perintah berikut untuk melakukan remote ke server: ssh -p 40 username@server_ip
 - Konfirmasi Koneksi: Jika ini pertama kalinya terhubung ke server tersebut, maka akan diminta untuk mengonfirmasi koneksi. Ketik yes lalu tekan Enter.
 - Masukkan Password: Masukkan password dari akun username di server dan tekan Enter
+![image alt](https://github.com/M-Prakarsa-Al-Islam/SSH-Remote-Ubuntu-Server/blob/673a8b27cffa9ea7a03e66ffbc3b0b582637f320/Screenshot%20(273).png)
 - login telah berhasil, sekarang telah terhubung ke server Ubuntu dan dapat mengelola server dari jarak jauh menggunakan ubuntu desktop
 - Untuk keluar dari sesi remote SSH dan kembali ke desktop Ubuntu seperti semula dapat menggunakan command: $ exit
